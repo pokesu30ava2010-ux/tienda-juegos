@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tienda</title>
+    <link rel="stylesheet" href="Css/bootstrap.min.css">
+    <link rel="stylesheet" href="Css/estilos.css?v=2">
+</head>
+
+<body>
+    <header class="encabezado">
+        <h1>🎮 Tienda</h1>
+        <div class="barra">
+            <div class="dinero">
+                <span>Dinero</span>
+                <strong id="Dinero"></strong>
+            </div>
+            <button id="btnCarrito" class="btn-carrito">🛒 Carrito <span id="contador">0</span></button>
+        </div>
+    </header>
+
+    <main>
+        <section class="sobre">
+            <h2>Sobre nosotros</h2>
+            <p>Somos un pequeño emprendimiento dedicado a la venta de videojuegos. Vendemos juegos inspirados en
+                franquicias conocidas, pero adaptadas a nuestra maneras, y creados por nosotros mismos, juegos tipo:
+                Super Mario, Klonoa, ¡y más!
+                <br>
+                Soliamos tener una tienda física, pero debido a la pandemia, quebramos y por ahora hemos logrado crear
+                esta página web.
+            </p>
+        </section>
+
+        <h2 class="titulo-seccion">Nuestros juegos</h2>
+
+        <div id="carouselStackedIndicators" class="carousel slide">
+            <div class="carousel-inner">
+
+                <div class="carousel-item active">
+                    <section class="juego card" data-id="kianw" data-nombre="KIANW" data-precio="250"
+                        data-juego="juegos/Proyecto%20basico/index.html">
+                        <img src="Multimedia/kianw.jpg" class="card-img-top" alt="KIANW">
+                        <div class="card-body">
+                            <h4 class="card-title">KIANW</h4>
+                            <p class="card-text">Un juego basado en la franquicia de Klonoa.
+                                En este juego encarnas a Klonoa y Guntz en su misión de erradicar la corrupción y
+                                ayudar a Magatsu
+                            </p>
+                            <span class="precio"></span>
+                            <button class="btn-juego"></button>
+                        </div>
+                    </section>
+                </div>
+
+                <div class="carousel-item">
+                    <section class="juego card" data-id="galaxy" data-nombre="Super Galaxy Jump" data-precio="300"
+                        data-juego="juegos/Mario%20galaxy/MarioG-Mg.html">
+                        <img src="Multimedia/Galaxy Jump.png" class="card-img-top" alt="Super Galaxy Jump">
+                        <div class="card-body">
+                            <h4 class="card-title">Super Galaxy Jump</h4>
+                            <p class="card-text">Un juego basado en Super Mario Galaxy. ¿Cuantos puntos podras
+                                obtener?
+                            </p>
+                            <span class="precio"></span>
+                            <button class="btn-juego"></button>
+                        </div>
+                    </section>
+                </div>
+
+                <div class="carousel-item">
+                    <section class="juego card" data-id="mariobros" data-nombre="Super Mario Bros." data-precio="200"
+                        data-juego="juegos/Super%20Mario%20Bros/index.html">
+                        <img src="Multimedia/mariobros.webp" class="card-img-top" alt="Super Mario Bros">
+                        <div class="card-body">
+                            <h4 class="card-title">Super Mario Bros.</h4>
+                            <p class="card-text">Juega a una versión del clásico Super Mario Bros de NES creada por
+                                nosotros</p>
+                            <span class="precio"></span>
+                            <button class="btn-juego"></button>
+                        </div>
+                    </section>
+                </div>
+
+            </div>
+
+            <div class="controles">
+                <button class="nav-btn" type="button" data-bs-target="#carouselStackedIndicators"
+                    data-bs-slide="prev" aria-label="Anterior">‹</button>
+                <div class="carousel-indicators">
+                    <button type="button" data-bs-target="#carouselStackedIndicators" data-bs-slide-to="0"
+                        class="active" aria-current="true" aria-label="Slide 1"></button>
+                    <button type="button" data-bs-target="#carouselStackedIndicators" data-bs-slide-to="1"
+                        aria-label="Slide 2"></button>
+                    <button type="button" data-bs-target="#carouselStackedIndicators" data-bs-slide-to="2"
+                        aria-label="Slide 3"></button>
+                </div>
+                <button class="nav-btn" type="button" data-bs-target="#carouselStackedIndicators"
+                    data-bs-slide="next" aria-label="Siguiente">›</button>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p id="Contacto">Contacto: <u>+52-123-Tienda</u></p>
+        <button id="btnReiniciar" class="btn-reiniciar">Reiniciar datos de la tienda</button>
+    </footer>
+
+    <!-- CARRITO -->
+    <div id="fondoCarrito" class="fondo-carrito"></div>
+    <aside id="panelCarrito" class="panel-carrito">
+        <div class="panel-top">
+            <h3>🛒 Tu carrito</h3>
+            <button id="cerrarCarrito" aria-label="Cerrar">✕</button>
+        </div>
+        <ul id="listaCarrito"></ul>
+        <div class="panel-bottom">
+            <p class="total"><span>Total:</span> <strong id="totalCarrito">$0.00</strong></p>
+            <button id="btnComprarTodo" class="btn-juego">Comprar todo</button>
+            <button id="btnVaciar" class="btn-juego btn-vaciar">Vaciar carrito</button>
+        </div>
+    </aside>
+
+    <div id="aviso" class="aviso"></div>
+
+    <script src="Js/Main.js?v=2"></script>
+    <script type="module" src="Js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>

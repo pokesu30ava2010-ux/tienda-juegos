@@ -1,0 +1,14 @@
+body {
+	margin: 0;
+	background: #1a1a2e;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 100vh;
+}
+canvas {
+	border: 3px solid #fff;
+	background-image: url("fondo.png");
+	background-size: cover;
+	background-position: center;
+}
